@@ -1,3 +1,7 @@
+#This script will count the frequency of words in a text file
+#input - full filepath
+#output - top ten words with highest frequency
+
 import sys
 import os
 
