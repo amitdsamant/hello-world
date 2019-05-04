@@ -38,9 +38,9 @@ if __name__=="__main__":
     #creating a dictionary with key as text id and value as text
     with open(text_path) as tf:
         for line in tf:
-            print("Line: {}".format(line))
+            #print("Line: {}".format(line))
             text = json.loads(line)
-            print("text: {}".format(text))
+            #print("text: {}".format(text))
             texts[text['id']] = text
 
 

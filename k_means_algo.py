@@ -38,8 +38,8 @@ def initialize_seeds(texts, k):
         # using a weighted probability distribution
         # where a point x is chosen with probability proportional to D(x)^2.
         IDs, weights = list(prob_dict.keys()), list(prob_dict.values())
-        print(weights)
-        print(IDs)
+        #print(weights)
+        #print(IDs)
         seed = random.choice(IDs, p=weights)
         seeds.add(seed)
 
@@ -64,7 +64,7 @@ def update_clusters(texts, clusters, id_with_clusters, jaccard_table, num_centro
 
     for text1 in texts:
 
-        print("Text id => Text", text1, texts[text1])
+        #print("Text id => Text", text1, texts[text1])
         min_distance = float("inf") # infinite distance. minimize this distance metri using jaccard distance
         min_cluster = id_with_clusters[text1] # get the cluster to which this text currently belongs
 
@@ -73,7 +73,7 @@ def update_clusters(texts, clusters, id_with_clusters, jaccard_table, num_centro
         # loop for each cluster and find the cluster with the min distance from text1
         # and then add text1 to that cluster
         for k in clusters:
-            print("k: ", k)
+            #print("k: ", k)
             distance, total = 0, 0
 
             #loop for each text already in the cluster and find the jaccard distance between the each text2 in the cluster and text1
@@ -81,12 +81,12 @@ def update_clusters(texts, clusters, id_with_clusters, jaccard_table, num_centro
             # if this new average distance is less than the existing min distance then assign the text1 to the cluster
             #likewise iterate through all the clusters
             for text2 in clusters[k]: # calculate distance from each text in the cluster
-                print("Text id in cluster => Text in cluster", text2)
-                print("text1 and text2", text1, text2)
+                #print("Text id in cluster => Text in cluster", text2)
+                #print("text1 and text2", text1, text2)
                 distance += jaccard_table[text1][text2] # we have already calculated the distance between the two texts. we are just fetching it here
                 total += 1
-            print("distance", distance)
-            print("total", total)
+            #print("distance", distance)
+            #print("total", total)
             if total > 0:
                 average_distance = float(distance/ total)
                 if average_distance < min_distance:
@@ -144,8 +144,8 @@ def initialize_clusters(texts, seeds, num_of_centroids):
         print("Seeds: ", str(seeds[k]))
         clusters[k] = set([seeds[k]])  # a list of sets. Cluster k is assigned a seed id
         id_with_clusters[seeds[k]] = k # seeds[k] is the text id..we are associating the text id with a cluster k
-    print("Cluster: ", str(clusters))
-    print("id_with_clusters: ", str(id_with_clusters))
+    #print("Cluster: ", str(clusters))
+    #print("id_with_clusters: ", str(id_with_clusters))
 
     return clusters, id_with_clusters
 
@@ -159,16 +159,23 @@ def jaccard_distance(set_one, set_two):
 
 def create_bag_of_words(text):
     stop_words = stopwords.words("english")
-    text_lower_case = text.lower()
+    text_lower_case = text.lower().replace("/", " ")
+    #text_lower_case = text.lower()
+    pattern = '[0-9]'
+    text_lower_case = re.sub(pattern,'',text_lower_case)
     line = text_lower_case.split(" ")
     sentence = [] # empty list
     regex = re.compile("[%s]" % re.escape(string.punctuation))
     for word in line:
+        #print("Word:", word)
         word = word.strip()
+
         if not re.match(r'^https?:\/\/.*[\r\n]*', word) and word != '' and not re.match('\s',word) and word != 'rt' and not re.match('^@.*', word) and word not in stop_words:
             clean_word = regex.sub("", word)
             sentence.append(clean_word)
-    print("Printing Sentence: ", str(sentence))
+
+    sentence = [word for word in sentence if word != '']
+    #print("Printing Sentence: ", str(sentence))
     return sentence
 
 
@@ -212,6 +219,35 @@ def k_means(texts,num_of_centroids):
     # Run k-means algo
 
     clusters, id_with_clusters = find_stable_clusters(texts, clusters, id_with_clusters, jaccard_table, MAXITERATIONS, num_of_centroids)
-    # prints results to screen
 
     print_cluster(clusters)
+
+    cluster_dict = {}
+    for cluster_id, cluster_set in clusters.items():
+        text_list = list(cluster_set)
+        #print("text_list:", text_list)
+        new_list = []
+        for text_id in text_list:
+            #print(text_id)
+            new_list.append(set((create_bag_of_words(texts[text_id]["text"]))))
+        #print("New List", str(new_list))
+        #print("for cluster:", cluster_id, "the name is", set.intersection(*new_list))
+        cluster_name = ''
+        for items in set.intersection(*new_list):
+            cluster_name = cluster_name + "|" + items
+        #print("cluster_name", cluster_name)
+        #print(type(clusters))
+        #print(clusters)
+        new_dict = {}
+
+        new_dict["text_set"] = cluster_set
+        new_dict["cluster_name"] = cluster_name
+        #clusters[cluster_id]['cluster_name'] = cluster_name
+        cluster_dict[cluster_id] = new_dict
+
+    print(cluster_dict)
+
+    #print_cluster(clusters)
+    # prints results to screen
+
+
