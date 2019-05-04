@@ -1,3 +1,1 @@
-# hello-world
-First Hello World
-Trying to edit this file
+# This is a repo of all Python code tried and tested for practice
