@@ -1,7 +1,50 @@
 from nltk.corpus import stopwords
 import re, string
-MAXITERATIONS = 4
+from numpy import random
 
+MAXITERATIONS = 10
+
+
+def initialize_seeds(texts, k):
+    # Computes initial seeds for k-means using k-means++ algorithm
+
+    # 1. Choose one center uniformly at random from among the data points
+    print(str(list(texts.keys())))
+    seed = random.choice(list(texts.keys()))
+
+
+    # 2. For each data point x, compute D(x),
+    # the distance between x and the nearest center that has already been chosen
+    seeds = set([seed])
+    while len(seeds) < k:
+        distanceMatrix = {}
+        sum_sqr_dist = 0
+        for seed in seeds:
+            bag1 = set(create_bag_of_words(texts[seed]['text']))
+            for ID in texts:
+                if ID == seed:
+                    continue
+                bag2 = set(create_bag_of_words(texts[ID]['text']))
+                dist = jaccard_distance(bag1, bag2)
+                if ID not in distanceMatrix or dist < distanceMatrix[ID]:
+                    distanceMatrix[ID] = dist
+        prob_dict = {}
+        for ID in distanceMatrix:
+            sum_sqr_dist += distanceMatrix[ID] * distanceMatrix[ID]
+        for ID in distanceMatrix:
+            prob_dict[ID] = distanceMatrix[ID] * distanceMatrix[ID] / sum_sqr_dist
+
+        # 3. Choose one new data point at random as a new center,
+        # using a weighted probability distribution
+        # where a point x is chosen with probability proportional to D(x)^2.
+        IDs, weights = list(prob_dict.keys()), list(prob_dict.values())
+        print(weights)
+        print(IDs)
+        seed = random.choice(IDs, p=weights)
+        seeds.add(seed)
+
+    # 4. Repeat Steps 2 and 3 until k centers have been chosen.
+    return list(seeds)
 
 def print_cluster(clusters):
 
@@ -152,8 +195,8 @@ def k_means_set_up(seeds,texts,num_of_centroids):
     return jaccard_table, clusters, id_with_clusters
 
 #Run kmeans algorithm on text
-def k_means(seeds,texts,num_of_centroids):
-
+def k_means(texts,num_of_centroids):
+    seeds = initialize_seeds(texts,num_of_centroids)
     #initialize a look up table to calculate all the jaccard distances pairs. initialize all clusters
     jaccard_table,clusters, id_with_clusters = k_means_set_up(seeds,texts,num_of_centroids)
 

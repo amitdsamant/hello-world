@@ -30,7 +30,7 @@ if __name__=="__main__":
 
     seed_path = "./data/initial_seeds_3.txt"
     text_path = "./data/tweets_3.json"
-    num_of_centroids = 3
+    num_of_centroids = 5
     output_path = "./data"
 
     print("Number of centroids: {}".format(int(num_of_centroids)))
@@ -44,16 +44,16 @@ if __name__=="__main__":
             texts[text['id']] = text
 
 
-    seeds = []
-    with open(seed_path) as sf:
-        for line in sf:
-            seeds.append(int(line.rstrip(',\n')))
-    print(str(seeds))
+    # seeds = []
+    # with open(seed_path) as sf:
+    #     for line in sf:
+    #         seeds.append(int(line.rstrip(',\n')))
+    # print(str(seeds))
 
     #We now have a texts dictionary and a seed list
 
     #clusters, id_with_clusters = k_means(seeds,texts,num_of_centroids)
-    k_means(seeds, texts, num_of_centroids)
+    k_means(texts, num_of_centroids)
 
     # Writing to file
 
