@@ -70,10 +70,16 @@ def update_clusters(texts, clusters, id_with_clusters, jaccard_table, num_centro
 
         # Calculate min avg distance to each cluster
 
-        for k in clusters: #there are default 3 clusters loop for each cluster and find the cluster with the min distance
+        # loop for each cluster and find the cluster with the min distance from text1
+        # and then add text1 to that cluster
+        for k in clusters:
             print("k: ", k)
             distance, total = 0, 0
 
+            #loop for each text already in the cluster and find the jaccard distance between the each text2 in the cluster and text1
+            # sum up the distances and then take an average => this will tell you the distance between the text1 and the current cluster
+            # if this new average distance is less than the existing min distance then assign the text1 to the cluster
+            #likewise iterate through all the clusters
             for text2 in clusters[k]: # calculate distance from each text in the cluster
                 print("Text id in cluster => Text in cluster", text2)
                 print("text1 and text2", text1, text2)
@@ -96,6 +102,7 @@ def update_clusters(texts, clusters, id_with_clusters, jaccard_table, num_centro
 
 def find_stable_clusters(texts, clusters, id_with_clusters, jaccard_table, max_iterations, num_centroids):
     #initialize previous cluster to compare with new clustering
+    #this is the first call for clustering
     updated_clusters, updated_id_with_clusters = update_clusters(texts, clusters, id_with_clusters, jaccard_table, num_centroids)
 
     # the above function call has given us the updated clusters and updated id_with_clusters
@@ -104,16 +111,18 @@ def find_stable_clusters(texts, clusters, id_with_clusters, jaccard_table, max_i
     id_with_clusters = updated_id_with_clusters
 
     #converge until old and new are same
+    # keep clustering until max iterations or until the clustering does not change
+    # if id_with_clusters == updated_id_with_clusters => this means no change
     iterations = 1
     while iterations < max_iterations:
         updated_clusters, updated_id_with_clusters = update_clusters(texts, clusters, id_with_clusters, jaccard_table,num_centroids)
         iterations += 1
-        if id_with_clusters != updated_id_with_clusters:
+        if id_with_clusters != updated_id_with_clusters: # if id_with_clusters != updated_id_with_clusters => this means change
             print("Not converged yet..")
             clusters = updated_clusters
             id_with_clusters = updated_id_with_clusters
-        else:
-            print("Converged at ", iterations, " iterartions")
+        else: # if id_with_clusters == updated_id_with_clusters => this means no change adn we return clusters and id_with_clusters to the calling function
+            print("Converged at ", iterations, " iterations")
         return clusters, id_with_clusters
 
     # if meets max iterations, cut off the algo
