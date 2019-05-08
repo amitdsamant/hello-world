@@ -1,4 +1,4 @@
-from nltk.corpus import stopwords
+#from nltk.corpus import stopwords
 import re, string
 from numpy import random
 
@@ -158,7 +158,7 @@ def jaccard_distance(set_one, set_two):
 
 
 def create_bag_of_words(text):
-    stop_words = stopwords.words("english")
+    #stop_words = stopwords.words("english")
     text_lower_case = text.lower().replace("/", " ")
     #text_lower_case = text.lower()
     pattern = '[0-9]'
@@ -170,7 +170,7 @@ def create_bag_of_words(text):
         #print("Word:", word)
         word = word.strip()
 
-        if not re.match(r'^https?:\/\/.*[\r\n]*', word) and word != '' and not re.match('\s',word) and word != 'rt' and not re.match('^@.*', word) and word not in stop_words:
+        if not re.match(r'^https?:\/\/.*[\r\n]*', word) and word != '' and not re.match('\s',word) and word != 'rt' and not re.match('^@.*', word) :
             clean_word = regex.sub("", word)
             sentence.append(clean_word)
 
