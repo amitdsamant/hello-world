@@ -36,13 +36,22 @@ if __name__=="__main__":
     print("Number of centroids: {}".format(int(num_of_centroids)))
     texts = {} #texts is a dictionary
     #creating a dictionary with key as text id and value as text
-    with open(text_path) as tf:
+    # with open(text_path) as tf:
+    #     for line in tf:
+    #         #print("Line: {}".format(line))
+    #         text = json.loads(line)
+    #         #print("text: {}".format(text))
+    #         texts[text['id']] = text
+    # print(texts)
+    # print("**************")
+    #textscsv = {}
+    with open("./data/tweets_3.csv") as tf:
         for line in tf:
-            #print("Line: {}".format(line))
-            text = json.loads(line)
-            #print("text: {}".format(text))
-            texts[text['id']] = text
+            new_list = line.strip().split(",")
+            texts[new_list[1]] = {'text':new_list[0],'id':new_list[1]}
 
+    print(texts)
+    #sys.exit()
 
     # seeds = []
     # with open(seed_path) as sf:
