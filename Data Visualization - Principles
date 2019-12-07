@@ -1,4 +1,4 @@
-Data Visualization
+Data Visualization - Referenced From: https://cdn2.hubspot.net/hub/53/file-863940581-pdf/Data_Visualization_101_How_to_Design_Charts_and_Graphs.pdf
 
 What is the story?
   - Trends - Example: Ice cream sales over time
@@ -45,3 +45,45 @@ Data Relationships
     - Best Practices
       - Visualize no more than 5 charts - It is difficult to differentiate between small values; depicting too many slices decreases the impact of the visualization. 
         If needed, you can group smaller values into an “other” or “miscellaneous” category, but make sure it does not hide interesting or significant information
+      - Do not use multiple pie charts for comparision - Slice sizes are very difficult to compare side-by-side. Use a stacked bar chart instead
+      - Verify that values total 100% and that pie slices are sized proportionate to their corresponding value.
+      -  Order Slices correctly
+        - OPTION 1 - Place the largest section at 12 o’clock, going clockwise. Place the second largest section at 12 o’clock,
+                     going counterclockwise. The remaining sections can be placed below, continuing counterclockwise.
+        - OPTION 2 - Start the largest section at 12 o’clock, going clockwise. Place remaining sections in descending order, going clockwise
+        
+Line Charts
+  - Line charts are used to show time-series relationships with continuous data. They help show trend, acceleration, deceleration, and volatility.
+  - Include zero baseline if possible -Although a line chart does not have to start at a zero baseline, it should be included if possible. If relatively small fluctuations in data are meaningful (e.g., in stock market data), you may truncate the scale to showcase these variances.
+  - Do not plot more than 4 lines - If you need to display more, break them out into separate charts for better comparison.
+  - Use solid lines - Dashed and dotted lines can be distracting.
+  - Label the lines directly - This lets readers quickly identify lines and corresponding labels instead of referencing a legend.
+  - Use the right height - Plot all data points so that the line chart takes up approximately two-thirds of the y-axis’ total scale.
+
+
+Area Charts 
+  - depict a time-series relationship, but they are different than line charts in that they can represent volume.
+  - Best used to show or compare a quantitative progression over time.
+  - STACKED AREA - Best used to visualize part-to-whole relationships, helping show how each category contributes to the cumulative total.
+  - 100% STACKED AREA - Best used to show distribution of categories as part of a whole, where the cumulative total is unimportant.
+  
+  - Best Practices
+    - In stacked area charts, arrange data to position categories with highly variable data on the top of the chart and low variability on the bottom
+    - START Y-AXIS VALUE AT 0 - Starting the axis above zero truncates the visualization of values.
+    - DON’T DISPLAY MORE THAN 4 DATA CATEGORIES - Too many will result in a cluttered visual that is difficult to decipher.
+    - USE TRANSPARENT COLORS - In standard area charts, ensure data isn’t obscured in the background by ordering thoughtfully and using transparency.
+    - DON’T USE AREA CHARTS TO DISPLAY DISCRETE DATA - The connected lines imply intermediate values, which only exist with continuous data
+    
+Scatter Plot
+  - Scatter plots show the relationship between items based on two sets of variables. They are best used to show correlation in a large amount of data
+    For example - Product Data scatter over two metrics - # of Units Sold and Revenue 
+                - Alert Category over two metrics - # of Alerts and Time taken to Resolve
+  - Best Practices
+    - START Y-AXIS VALUE AT 0 - Starting the axis above zero truncates the visualization of values.
+    - INCLUDE MORE VARIABLES - Use size and dot color to encode additional data variables.
+    - USE TREND LINES - These help draw correlation between the variables to show trends.
+    - DON’T COMPARE MORE THAN 2 TREND LINES - Too many lines make data difficult to interpret.
+    
+    
+    
+    
