@@ -1,0 +1,19 @@
+Data Visualization
+
+What is the story?
+  - Trends - Example: Ice cream sales over time
+  - Corelations - Example: Ice cream sales vs. temperature
+  - Outliers - Example: Ice cream sales in an unusual region
+
+What kind of data?
+  - Quantitative - Data that can be counted or measured; all values are numerical.
+  - Discrete - Numerical data that has a finite number of possible values. Example: Number of employees in the office.
+  - Continous - Data that is measured and has a value within a range. Example: Rainfall in a year.
+  - Categorical - Data that can be sorted according to group or category. Example: Types of products sold.
+ 
+Data Relationships
+  - Nominal Comparision - Bar Charts - Example: Number of visitors to various websites.
+  - Deviation - This examines how data points relate to each other, particularly how far any given data point differs from the mean. 
+                Example: Amusement park tickets sold on a rainy day vs. a regular day.
+  - Time Series - This tracks changes in values of a consistent metric over time. Example: Monthly sales
+  - Distribution - This shows data distribution, often around a central value. Example: Heights of players on a basketball team.
