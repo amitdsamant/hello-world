@@ -31,17 +31,19 @@ Data Relationships
     - Compare parts of a whole
       Stacked Bar Chart - Best used when there is a need to compare multiple part-to-whole relationships. These can use discrete or continuous data, oriented either vertically or horizontally
       00% STACKED - Best used when the total value of each category is unimportant and percentage distribution of subcategories is the primary message.
-
+    
     - Bar Chart Best Practices 
         - Use Horizontal Label
         - Space between bar should be 1/2 bar width
         - Start Y axis at 0 - Starting at a value above zero truncates the bars and doesn’t accurately reflect the full value
+        - Bar charts are great for comparisons. To judge their end points, the bars should begin at a zero baseline
         - Use Consistent Colors - Use one color for bar charts. You may use an accent color to highlight a significant data point
         - Order Data - Order categories alphabetically, sequentially, or by value
     
   Pie Charts
     - Pie charts are best used for making part-to-whole comparisons with discrete or continuous data. 
       They are most impactful with a small data set
+    - Pie charts seem friendly, but in reality they’re hard to read. In most cases, you can find a better alternative.
     - Best Practices
       - Visualize no more than 5 charts - It is difficult to differentiate between small values; depicting too many slices decreases the impact of the visualization. 
         If needed, you can group smaller values into an “other” or “miscellaneous” category, but make sure it does not hide interesting or significant information
@@ -54,6 +56,8 @@ Data Relationships
         
 Line Charts
   - Line charts are used to show time-series relationships with continuous data. They help show trend, acceleration, deceleration, and volatility.
+  - Line charts often show a trend. Stretching the height of the graph can create fake drama, while stretching the width can underplay it.
+  
   - Include zero baseline if possible -Although a line chart does not have to start at a zero baseline, it should be included if possible. If relatively small fluctuations in data are meaningful (e.g., in stock market data), you may truncate the scale to showcase these variances.
   - Do not plot more than 4 lines - If you need to display more, break them out into separate charts for better comparison.
   - Use solid lines - Dashed and dotted lines can be distracting.
@@ -90,7 +94,7 @@ Bubble Chart
   - BUBBLE MAP - Best used for visualizing values for specific geographic regions.
   - Best Practices
     - MAKE SURE LABELS ARE VISIBLE - All labels should be unobstructed and easily identified with the corresponding bubble.
-    - SIZE BUBBLES APPROPRIATELY - Bubbles should be scaled according to area, not diameter.
+    - SIZE BUBBLES APPROPRIATELY - Bubbles should be scaled according to area, not diameter. When we double the height of a circle we actually quadruple — not double — its area
     - DON’T USE ODD SHAPESm - Avoid adding too much detail or using shapes that are not entirely circular; this can lead to inaccuracies.
 
 Heat Map
@@ -101,18 +105,23 @@ Heat Map
       Instead, use a single color with varying shade or a spectrum between two analogous colors to show intensity. 
       Also remember to intuitively code color intensity according to values.
     - USE PATTERNS SPARINGLY - A pattern overlay that indicates a second variable is acceptable, but using multiple is overwhelming and distracting.
-    - CHOOSE APPROPRIATE DATA RANGES
-Select 3-5 numerical ranges that enable fairly even distribution of data between them. Use +/- signs to extend high and low ranges.
+    - CHOOSE APPROPRIATE DATA RANGES - Select 3-5 numerical ranges that enable fairly even distribution of data between them. Use +/- signs to extend high and low ranges.
 
+Best Practices in Data Visualization
+1 | Do Use One Color To Represent Each Category.
+2 | Do Order Data Sets Using Logical Heirarchy.
+3 | Do Use Callouts To Highlight Important Or Interesting Information.
+4 | Do Visualize Data In A Way That Is Easy For Readers To Compare Values.
+5 | Do Use Icons To Enhance Comprehension And Reduce Unnecessary Labeling.
+6 | Don’t Use High Contrast Color Combinations Such As Red/Green Or Blue/Yellow.
+7 | Don’t Use 3D Charts. They Can Skew Perception Of The Visualization.
+8 | Don’t Add Chart Junk. Unnecessary Illustrations, Drop Shadows, Or Ornamentations Distract From The Data.
+9 | Don’t Use More Than 6 Colors In A Single Layout.
+10 | Don’t Use Distracting Fonts Or Elements (Such As Bold, Italic, Or Underlined Text).
+11 | “When Any Color Appears As A Contrast To The Norm, Our Eyes Pay Attention, And Our Brains Attempt To Assign Meaning To That Difference,” Writes Data Visualization Expert Stephen Few. 
+    Too Many Meanings, Or Colors, Just Blur Your Message And Throw People Off-Track.
+12 | Background, Borders, Shading, Dark Grid Lines And Needless Labels Are Your Enemies. Banish Them To Draw Attention To The Data
+13 | Text Plays A Number Of Roles In Communicating With Data: Use It To Label, Introduce, Explain, Reinforce, Highlight, Recommend And Tell A Story,
+14 | Charting Two Sets Of Data With One Scale On The Left And Another On The Right Can Be Confusing, And Suggests A Relationship That May Not Exist
+15 | Tables Are Good For Looking Up Individual Numbers. But, To Help People Scan And Compare Them, Align Whole Numbers Flush
 
-1 | DO USE ONE COLOR TO REPRESENT EACH CATEGORY.
-2 | DO ORDER DATA SETS USING LOGICAL HEIRARCHY.
-3 | DO USE CALLOUTS TO HIGHLIGHT IMPORTANT OR INTERESTING INFORMATION.
-4 | DO VISUALIZE DATA IN A WAY THAT IS EASY FOR READERS TO COMPARE VALUES.
-5 | DO USE ICONS TO ENHANCE COMPREHENSION AND REDUCE UNNECESSARY LABELING.
-6 | DON’T USE HIGH CONTRAST COLOR COMBINATIONS SUCH AS RED/GREEN OR BLUE/YELLOW.
-7 | DON’T USE 3D CHARTS. THEY CAN SKEW PERCEPTION OF THE VISUALIZATION.
-8 | DON’T ADD CHART JUNK. UNNECESSARY ILLUSTRATIONS, DROP SHADOWS, OR ORNAMENTATIONS DISTRACT FROM THE DATA.
-9 | DON’T USE MORE THAN 6 COLORS IN A SINGLE LAYOUT.
-10 | DON’T USE DISTRACTING FONTS OR ELEMENTS (SUCH AS BOLD, ITALIC, OR UNDERLINED TEXT).
-    
