@@ -83,7 +83,36 @@ Scatter Plot
     - INCLUDE MORE VARIABLES - Use size and dot color to encode additional data variables.
     - USE TREND LINES - These help draw correlation between the variables to show trends.
     - DON’T COMPARE MORE THAN 2 TREND LINES - Too many lines make data difficult to interpret.
-    
-    
-    
+
+Bubble Chart
+  - Bubble charts are good for displaying nominal comparisons or ranking relationships.
+  - BUBBLE PLOT - This is a scatter plot with bubbles, best used to display an additional variable.
+  - BUBBLE MAP - Best used for visualizing values for specific geographic regions.
+  - Best Practices
+    - MAKE SURE LABELS ARE VISIBLE - All labels should be unobstructed and easily identified with the corresponding bubble.
+    - SIZE BUBBLES APPROPRIATELY - Bubbles should be scaled according to area, not diameter.
+    - DON’T USE ODD SHAPESm - Avoid adding too much detail or using shapes that are not entirely circular; this can lead to inaccuracies.
+
+Heat Map
+  - Heat maps display categorical data, using intensity of color to represent values of geographic areas or data tables.
+  - Best Practices
+    - USE A SIMPLE MAP OUTLINE - These lines are meant to frame the data, not distract.
+    - SELECT COLORS APPROPRIATELY - Some colors stand out more than others, giving unnecessary weight to that data. 
+      Instead, use a single color with varying shade or a spectrum between two analogous colors to show intensity. 
+      Also remember to intuitively code color intensity according to values.
+    - USE PATTERNS SPARINGLY - A pattern overlay that indicates a second variable is acceptable, but using multiple is overwhelming and distracting.
+    - CHOOSE APPROPRIATE DATA RANGES
+Select 3-5 numerical ranges that enable fairly even distribution of data between them. Use +/- signs to extend high and low ranges.
+
+
+1 | DO USE ONE COLOR TO REPRESENT EACH CATEGORY.
+2 | DO ORDER DATA SETS USING LOGICAL HEIRARCHY.
+3 | DO USE CALLOUTS TO HIGHLIGHT IMPORTANT OR INTERESTING INFORMATION.
+4 | DO VISUALIZE DATA IN A WAY THAT IS EASY FOR READERS TO COMPARE VALUES.
+5 | DO USE ICONS TO ENHANCE COMPREHENSION AND REDUCE UNNECESSARY LABELING.
+6 | DON’T USE HIGH CONTRAST COLOR COMBINATIONS SUCH AS RED/GREEN OR BLUE/YELLOW.
+7 | DON’T USE 3D CHARTS. THEY CAN SKEW PERCEPTION OF THE VISUALIZATION.
+8 | DON’T ADD CHART JUNK. UNNECESSARY ILLUSTRATIONS, DROP SHADOWS, OR ORNAMENTATIONS DISTRACT FROM THE DATA.
+9 | DON’T USE MORE THAN 6 COLORS IN A SINGLE LAYOUT.
+10 | DON’T USE DISTRACTING FONTS OR ELEMENTS (SUCH AS BOLD, ITALIC, OR UNDERLINED TEXT).
     
