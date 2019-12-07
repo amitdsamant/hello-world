@@ -2,7 +2,7 @@ Data Visualization
 
 What is the story?
   - Trends - Example: Ice cream sales over time
-  - Corelations - Example: Ice cream sales vs. temperature
+  - Correlations - Example: Ice cream sales vs. temperature
   - Outliers - Example: Ice cream sales in an unusual region
 
 What kind of data?
@@ -17,3 +17,31 @@ Data Relationships
                 Example: Amusement park tickets sold on a rainy day vs. a regular day.
   - Time Series - This tracks changes in values of a consistent metric over time. Example: Monthly sales
   - Distribution - This shows data distribution, often around a central value. Example: Heights of players on a basketball team.
+  - Correlation - This is data with two or more variables that may demonstrate a positive or negative correlation to each other. 
+                  Example: Salaries according to education level.
+  - Part to Whole - Subset of Data in relation to whole - Example: Percentage of customers purchasing specific products
+  - Ranking - This shows how two or more values compare to each other in relative magnitude. 
+              Example: Historic weather patterns, ranked from the hottest months to the coldest.
+              
+   Bar Charts
+    - Change over time
+      VERTICAL (COLUMN CHART) Best used for chronological data (time-series should always run left to right), or when visualizing negative values below the x-axis
+    - Compare different categories
+      HORIZONTAL - Best used for data with long category labels.
+    - Compare parts of a whole
+      Stacked Bar Chart - Best used when there is a need to compare multiple part-to-whole relationships. These can use discrete or continuous data, oriented either vertically or horizontally
+      00% STACKED - Best used when the total value of each category is unimportant and percentage distribution of subcategories is the primary message.
+
+    - Bar Chart Best Practices 
+        - Use Horizontal Label
+        - Space between bar should be 1/2 bar width
+        - Start Y axis at 0 - Starting at a value above zero truncates the bars and doesn’t accurately reflect the full value
+        - Use Consistent Colors - Use one color for bar charts. You may use an accent color to highlight a significant data point
+        - Order Data - Order categories alphabetically, sequentially, or by value
+    
+  Pie Charts
+    - Pie charts are best used for making part-to-whole comparisons with discrete or continuous data. 
+      They are most impactful with a small data set
+    - Best Practices
+      - Visualize no more than 5 charts - It is difficult to differentiate between small values; depicting too many slices decreases the impact of the visualization. 
+        If needed, you can group smaller values into an “other” or “miscellaneous” category, but make sure it does not hide interesting or significant information
