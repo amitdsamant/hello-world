@@ -108,20 +108,26 @@ Heat Map
     - CHOOSE APPROPRIATE DATA RANGES - Select 3-5 numerical ranges that enable fairly even distribution of data between them. Use +/- signs to extend high and low ranges.
 
 Best Practices in Data Visualization
-1 | Do Use One Color To Represent Each Category.
-2 | Do Order Data Sets Using Logical Heirarchy.
-3 | Do Use Callouts To Highlight Important Or Interesting Information.
-4 | Do Visualize Data In A Way That Is Easy For Readers To Compare Values.
-5 | Do Use Icons To Enhance Comprehension And Reduce Unnecessary Labeling.
-6 | Don’t Use High Contrast Color Combinations Such As Red/Green Or Blue/Yellow.
-7 | Don’t Use 3D Charts. They Can Skew Perception Of The Visualization.
-8 | Don’t Add Chart Junk. Unnecessary Illustrations, Drop Shadows, Or Ornamentations Distract From The Data.
-9 | Don’t Use More Than 6 Colors In A Single Layout.
-10 | Don’t Use Distracting Fonts Or Elements (Such As Bold, Italic, Or Underlined Text).
-11 | “When Any Color Appears As A Contrast To The Norm, Our Eyes Pay Attention, And Our Brains Attempt To Assign Meaning To That Difference,” Writes Data Visualization Expert Stephen Few. 
-    Too Many Meanings, Or Colors, Just Blur Your Message And Throw People Off-Track.
-12 | Background, Borders, Shading, Dark Grid Lines And Needless Labels Are Your Enemies. Banish Them To Draw Attention To The Data
-13 | Text Plays A Number Of Roles In Communicating With Data: Use It To Label, Introduce, Explain, Reinforce, Highlight, Recommend And Tell A Story,
-14 | Charting Two Sets Of Data With One Scale On The Left And Another On The Right Can Be Confusing, And Suggests A Relationship That May Not Exist
-15 | Tables Are Good For Looking Up Individual Numbers. But, To Help People Scan And Compare Them, Align Whole Numbers Flush
+Do Use One Color To Represent Each Category.
+Do Order Data Sets Using Logical Heirarchy.
+Do Use Callouts To Highlight Important Or Interesting Information.
+Do Visualize Data In A Way That Is Easy For Readers To Compare Values.
+Do Use Icons To Enhance Comprehension And Reduce Unnecessary Labeling.
+Don’t Use High Contrast Color Combinations Such As Red/Green Or Blue/Yellow.
+Don’t Use 3D Charts. They Can Skew Perception Of The Visualization.
+Don’t Add Chart Junk. Unnecessary Illustrations, Drop Shadows, Or Ornamentations Distract From The Data.
+Don’t Use More Than 6 Colors In A Single Layout.
+Don’t Use Distracting Fonts Or Elements (Such As Bold, Italic, Or Underlined Text).
+When Any Color Appears As A Contrast To The Norm, Our Eyes Pay Attention, And Our Brains Attempt To Assign Meaning To That Difference,” Writes Data Visualization Expert Stephen Few. 
+Too Many Meanings, Or Colors, Just Blur Your Message And Throw People Off-Track.
+Background, Borders, Shading, Dark Grid Lines And Needless Labels Are Your Enemies. Banish Them To Draw Attention To The Data
+Text Plays A Number Of Roles In Communicating With Data: Use It To Label, Introduce, Explain, Reinforce, Highlight, Recommend And Tell A Story,
+Charting Two Sets Of Data With One Scale On The Left And Another On The Right Can Be Confusing, And Suggests A Relationship That May Not Exist
+Tables Are Good For Looking Up Individual Numbers. But, To Help People Scan And Compare Them, Align Whole Numbers Flush
+Also, adding thousands separators — like commas, dots, or spaces — to break the numbers up into smaller chunks, can help people store values in working memory and easily spot differences between the numbers.
+Extra decimal places look impressive and imply accuracy, but they’re often pointless. So, take a step back and round numbers off before plotting
+Use light colors for low values and dark colors for high values
+When choosing a color palette, consider their meaning in the culture of your target audience. If possible, use colors that readers will associate with your data anyway,
+
+
 
