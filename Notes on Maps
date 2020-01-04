@@ -1,4 +1,4 @@
-Notes for creating graphs for GS Maps
+Notes for creating graphs for Maps
 
 
 trend lines represent time series data
@@ -14,3 +14,12 @@ x axis : date
 Outliers
 SLA breaches: 
 Which BPR has the highest SLA breaches? Show a bubble chart or tree map
+
+enTime Trend against SLA time
+
+Show trends for end times of different BPRs against their SLAs
+https://help.tableau.com/current/pro/desktop/en-us/trendlines_add.htm
+
+Also show the SLA line in the trend chart
+https://blogs.perficient.com/2018/06/13/how-to-do-outliers-detection-and-handling-in-tableau/
+Add Reference Lines : https://help.tableau.com/current/pro/desktop/en-us/reference_lines.htm
