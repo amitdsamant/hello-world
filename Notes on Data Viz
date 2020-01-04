@@ -1,3 +1,16 @@
-Notes while creating graphs
+Notes for creating graphs for GS Maps
+
 
 trend lines represent time series data
+Daily trend for a BFN - this will have trend lines for each BPR with respect to 
+y axis : startTime, endTime and duration
+x axis : date
+
+stacked bar chart - For showing how diffferent BPRs contribute to the over all duration of a BFN
+For example, we had one bad day, so then which BPR contributed the most to that bad day
+y axis : %duration for a BPR out of total duration of BFN
+x axis : date
+
+Outliers
+SLA breaches: 
+Which BPR has the highest SLA breaches? Show a bubble chart or tree map
